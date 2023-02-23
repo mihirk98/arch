@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>arch</title>
+    <link rel="stylesheet" type="text/css" href="static/style.css" />
+    <link rel="stylesheet" type="text/css" href="static/components/block/style.css" />
+    <link rel="stylesheet" type="text/css" href="static/components/connector/style.css" />
+    <script src="static/components/block/script.js"></script>
+    <script src="static/components/connector/script.js"></script>
+</head>
+
+<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600&display=swap" rel="stylesheet">
+    <header>
+        <select id="select" onchange="select()">
+            <optgroup>
+                <option>mvc</option>
+                <option>mvp</option>
+                <option>mvvm</option>
+            </optgroup>
+        </select>
+        <select id="mvc" onchange="mvcSelect()">
+            <optgroup>
+                <option>generic</option>
+                <option>redux</option>
+            </optgroup>
+        </select>
+        <select id="mvp" onchange="mvpSelect()">
+            <optgroup>
+                <option>generic</option>
+            </optgroup>
+        </select>
+        <select id="mvvm" onchange="mvvmSelect()">
+            <optgroup>
+                <option>generic</option>
+                <option>bloc</option>
+            </optgroup>
+        </select>
+        <svg viewBox="0 0 96 96">
+            <path class="line" d="M 8 24 L 16 24" />
+            <path d="M 16 16 L 24 24 L 16 32 Z" />
+            <text x="28" y="28">calls</text>
+            <path class="line" stroke-dasharray="2, 2" d="M 8 48 L 16 48" />
+            <path d="M 16 40 L 24 48 L 16 56 Z" />
+            <text x="28" y="52">data</text>
+            <text x="28" y="64">binding</text>
+            <path class="line line-blue" stroke-dasharray="2, 2" d="M 8 76 L 16 76" />
+            <path d="M 16 68 L 24 76 L 16 84 Z" />
+            <text x="28" y="80">streams</text>
+        </svg>
+    </header>
+    <main id="main">
+        <section id="blocks"></section>
+    </main>
+    <script src="static/script.js"></script>
+</body>
+
+</html>
